@@ -1,0 +1,324 @@
+/* ---------------------------------------- Main ---------------------------------------- */
+:root {
+    --blue: rgb(90, 168, 241);
+    --blue2: rgb(13, 60, 110);
+    --magenta: rgb(79, 13, 141);
+    --white: rgb(255, 255, 255);
+    --background: rgb(201, 215, 243);
+    --background2: rgb(5, 0, 15);
+}
+
+html,
+body,
+nav,
+div,
+span,
+a,
+p,
+img,
+video {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--white);
+    word-wrap: break-word;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    color: var(--white);
+    word-wrap: break-word;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 0.2em 1em 0em 3em;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/* ---------------------------------------- Nav ---------------------------------------- */
+nav {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    background-color: var(--background2);
+}
+
+.navtop {
+    top: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.navbottom {
+    bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+nav>.nav-section {
+    display: flex;
+    padding-top: 0.9em;
+    padding-bottom: 0.8em;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+}
+
+nav>div>a {
+    transition: 0.5s;
+    letter-spacing: 2px;
+    filter: brightness(80%);
+}
+
+nav>div>a:hover {
+    transition: 0.5s;
+    letter-spacing: 4px;
+    filter: brightness(100%);
+}
+
+.active {
+    color: var(--blue);
+}
+
+#nav-page,
+#nav-contact {
+    flex-basis: 100%;
+}
+
+#nav-logo>img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    padding-left: 1.5em;
+}
+
+#nav-switch>a>img {
+    float: right;
+    width: 28px;
+    height: 28px;
+    transition: 0.5s;
+    padding-right: 1.5em;
+
+}
+
+#nav-contact>a>img {
+    width: 24px;
+    height: 24px;
+    transition: 0.5s;
+}
+
+#nav-switch>a>img:hover,
+#nav-contact>a>img:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
+
+@media (max-width: 600px) {
+
+    .navbottom>div>a {
+        font-size: 0.8em;
+        letter-spacing: 1.5px;
+    }
+
+    .navbottom>div>a:hover {
+        letter-spacing: 3px;
+    }
+
+    #nav-contact>a>img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .navbottom>div>a,
+    .navtop>div>a {
+        font-size: 0.6em;
+        letter-spacing: 1px;
+    }
+
+    .navbottom>div>a:hover,    #nav-logo>img {
+        width: 16px;
+        height: 16px;
+        padding-left: 1em;
+    }
+    .navtop>div>a:hover {
+        letter-spacing: 2px;
+    }
+
+    #nav-switch>a>img,
+    #nav-contact>a>img {
+        width: 12px;
+        height: 12px;
+    }
+
+    #nav-logo>img {
+        width: 16px;
+        height: 16px;
+        padding-left: 1em;
+    }
+
+    #nav-switch>img {
+        width: 14px;
+        height: 14px;
+        padding-right: 1em;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .navbottom>div>a {
+        font-size: 0.4em;
+        letter-spacing: 0.5px;
+    }
+
+    .navbottom>div>a:hover {
+        letter-spacing: 1px;
+    }
+
+    #nav-contact>a>img {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+/* ---------------------------------------- Homepage ---------------------------------------- */
+.homepage {
+    margin: 4.2em 1em 4em 1em;
+}
+
+.section {
+    width: 98%;
+    border-radius: 15px;
+    transition: border-radius 0.5s;
+    background-color: var(--blue2);
+    border: solid 8px var(--background);
+}
+
+.section:hover {
+    border-radius: 50px;
+    transition: border-radius 0.5s;
+}
+
+.section>p {
+    letter-spacing: 1px;
+    filter: brightness(80%);
+    padding: 0.5em 1em 1.5em 4.5em;
+}
+
+.column,
+.columns {
+    width: 100%;
+}
+
+.homepage>div>div>div>img {
+    width: 30px;
+    float: left;
+    padding: 1.2em 0em 0em 1.2em;
+}
+
+@media (min-width: 900px) {
+    .column {
+        width: 50%;
+        float: left;
+    }
+
+    .columns {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+/* ---------------------------------------- Portfolio ---------------------------------------- */
+.portfolio {
+    margin: 4.2em 1em 4em 1em;
+}
+
+.project {
+    transition: border-radius 0.5s;
+    border-radius: 15px;
+    width: 98%;
+    overflow: auto;
+    border: solid 8px var(--background);
+    background-color: var(--magenta);
+}
+
+.project:hover {
+    border-radius: 50px;
+    transition: border-radius 0.5s;
+}
+
+.project>p {
+    margin-left: 300px;
+    letter-spacing: 1px;
+    filter: brightness(80%);
+    padding: 0.5em 1em 1.5em 3em;
+}
+
+.project>h1 {
+    padding-top: 0.25em;
+}
+
+.portfolio img {
+    transition: 0.5s;
+    height: 30px;
+    width: 30px;
+    float: left;
+    padding: 1.1em 0em 0em 1em;
+    filter: brightness(80%);
+}
+
+.portfolio img:hover {
+    transition: 0.5s;
+    transform: scale(1.3);
+    filter: brightness(100%);
+}
+
+.project>video {
+    padding: 1em 1em 1em 1em;
+    width: 30%;
+    min-width: 300px;
+    float: left;
+}
+
+@media (max-width: 900px) {
+    .project>video {
+        width: 95%;
+        float: none;
+        min-width: 0;
+    }
+
+    .project>p {
+        margin-left: 0px;
+        padding: 1em 1em 1.5em 1em;
+    }
+
+    .portfolio img {
+        padding: 0 0 0 1em;
+    }
+
+    .project>h1 {
+        margin: 0;
+        padding: 0.15em 0 0 0;
+    }
+}
+
+/* ---------------------------------------- PortfolioTest ---------------------------------------- */
+.portfoliotest {
+    margin: 4.2em 1em 4em 1em;
+}
+
+.portcolumn,
+.portcolumns {
+    width: 100%;
+}
