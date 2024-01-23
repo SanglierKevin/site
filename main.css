@@ -21,6 +21,7 @@ video {
     padding: 0;
     font-size: 1em;
     font-weight: 600;
+    letter-spacing: 1px;
     color: var(--white);
     word-wrap: break-word;
     text-decoration: none;
@@ -28,14 +29,14 @@ video {
 }
 
 h1 {
+    margin: 0.15em 0em 0em 0em;
+    padding: 0;
     font-size: 1.5em;
     font-weight: 1000;
     letter-spacing: 2px;
     color: var(--white);
     word-wrap: break-word;
     font-family: sans-serif;
-    text-transform: uppercase;
-    padding: 0.2em 1em 0em 3em;
 }
 
 body {
@@ -146,11 +147,13 @@ nav>div>a:hover {
         letter-spacing: 1px;
     }
 
-    .navbottom>div>a:hover,    #nav-logo>img {
+    .navbottom>div>a:hover,
+    #nav-logo>img {
         width: 16px;
         height: 16px;
         padding-left: 1em;
     }
+
     .navtop>div>a:hover {
         letter-spacing: 2px;
     }
@@ -193,11 +196,13 @@ nav>div>a:hover {
 
 /* ---------------------------------------- Homepage ---------------------------------------- */
 .homepage {
-    margin: 4.2em 1em 4em 1em;
+    margin: 4.6em 1em 4.6em 1em;
 }
 
 .section {
-    width: 98%;
+    padding: 1em 1em 1em 1em;
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 15px;
     transition: border-radius 0.5s;
     background-color: var(--blue2);
@@ -205,14 +210,17 @@ nav>div>a:hover {
 }
 
 .section:hover {
-    border-radius: 50px;
+    border-radius: 30px;
     transition: border-radius 0.5s;
 }
 
+.section>h1 {
+    padding-left: 1.9em;
+}
+
 .section>p {
-    letter-spacing: 1px;
     filter: brightness(80%);
-    padding: 0.5em 1em 1.5em 4.5em;
+    padding: 1em 0em 1em 2.8em;
 }
 
 .column,
@@ -220,10 +228,10 @@ nav>div>a:hover {
     width: 100%;
 }
 
-.homepage>div>div>div>img {
+.homepage img {
     width: 30px;
     float: left;
-    padding: 1.2em 0em 0em 1.2em;
+    margin-right: 15px;
 }
 
 @media (min-width: 900px) {
@@ -241,32 +249,35 @@ nav>div>a:hover {
 
 /* ---------------------------------------- Portfolio ---------------------------------------- */
 .portfolio {
-    margin: 4.2em 1em 4em 1em;
+    margin: 4.6em 1em 4.6em 1em;
 }
 
 .project {
     transition: border-radius 0.5s;
     border-radius: 15px;
-    width: 98%;
+    margin-top: 1em;
     overflow: auto;
-    border: solid 8px var(--background);
     background-color: var(--magenta);
+    width: 100%;
 }
 
 .project:hover {
-    border-radius: 50px;
+    border-radius: 30px;
     transition: border-radius 0.5s;
 }
 
-.project>p {
-    margin-left: 300px;
-    letter-spacing: 1px;
-    filter: brightness(80%);
-    padding: 0.5em 1em 1.5em 3em;
+.right {
+    padding: 1em 1em 1em 1em;
 }
 
-.project>h1 {
-    padding-top: 0.25em;
+.right>h1 {
+    margin-left: calc(40% + 3em);
+}
+
+.right>p {
+    letter-spacing: 1px;
+    filter: brightness(80%);
+    padding-top: 1em;
 }
 
 .portfolio img {
@@ -274,7 +285,7 @@ nav>div>a:hover {
     height: 30px;
     width: 30px;
     float: left;
-    padding: 1.1em 0em 0em 1em;
+    margin-right: 15px;
     filter: brightness(80%);
 }
 
@@ -285,40 +296,23 @@ nav>div>a:hover {
 }
 
 .project>video {
+    border-radius: 30px;
     padding: 1em 1em 1em 1em;
-    width: 30%;
+    width: 40%;
     min-width: 300px;
     float: left;
 }
 
 @media (max-width: 900px) {
     .project>video {
-        width: 95%;
+        padding-bottom: 0em;
+        width: 100%;
         float: none;
         min-width: 0;
+        box-sizing: border-box;
     }
 
-    .project>p {
-        margin-left: 0px;
-        padding: 1em 1em 1.5em 1em;
+    .right>h1 {
+        margin-left: 1.9em;
     }
-
-    .portfolio img {
-        padding: 0 0 0 1em;
-    }
-
-    .project>h1 {
-        margin: 0;
-        padding: 0.15em 0 0 0;
-    }
-}
-
-/* ---------------------------------------- PortfolioTest ---------------------------------------- */
-.portfoliotest {
-    margin: 4.2em 1em 4em 1em;
-}
-
-.portcolumn,
-.portcolumns {
-    width: 100%;
 }
