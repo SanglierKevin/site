@@ -1,0 +1,268 @@
+/* ---------------------------------------- Main ---------------------------------------- */
+:root {
+    --blue: rgb(90, 168, 241);
+    --blue2: rgb(13, 60, 110);
+    --magenta: rgb(79, 13, 141);
+    --white: rgb(255, 255, 255);
+    --background: rgb(201, 215, 243);
+    --background2: rgb(5, 0, 15);
+}
+
+html,
+body,
+nav,
+div,
+span,
+a,
+p,
+img {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white);
+    word-wrap: break-word;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+h1 {
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    color: var(--white);
+    word-wrap: break-word;
+    font-family: sans-serif;
+    margin: 0.15em 0em 0em 0em;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/* ---------------------------------------- Navbar ---------------------------------------- */
+nav {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    background-color: var(--background2);
+}
+
+.navtop {
+    top: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.navbottom {
+    bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+nav>.nav-section {
+    display: flex;
+    padding-top: 0.9em;
+    padding-bottom: 0.8em;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+}
+
+nav>div>a {
+    transition: 0.5s;
+    letter-spacing: 2px;
+    filter: brightness(80%);
+}
+
+nav>div>a:hover {
+    transition: 0.5s;
+    letter-spacing: 4px;
+    filter: brightness(100%);
+}
+
+.active {
+    color: var(--blue);
+}
+
+#nav-page,
+#nav-contact {
+    flex-basis: 100%;
+}
+
+#nav-logo>img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    padding-left: 1.5em;
+}
+
+#nav-switch>a>img {
+    width: 28px;
+    height: 28px;
+    float: right;
+    transition: 0.5s;
+    padding-right: 1.5em;
+}
+
+#nav-contact>a>img {
+    width: 24px;
+    height: 24px;
+    transition: 0.5s;
+}
+
+#nav-switch>a>img:hover,
+#nav-contact>a>img:hover {
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+    .navbottom>div>a {
+        font-size: 0.8em;
+        letter-spacing: 1.5px;
+    }
+
+    .navbottom>div>a:hover {
+        letter-spacing: 3px;
+    }
+
+    #nav-contact>a>img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .navbottom>div>a,
+    .navtop>div>a {
+        font-size: 0.6em;
+        letter-spacing: 1px;
+    }
+
+    .navbottom>div>a:hover,
+    #nav-logo>img {
+        width: 16px;
+        height: 16px;
+        padding-left: 1em;
+    }
+
+    .navtop>div>a:hover {
+        letter-spacing: 2px;
+    }
+
+    #nav-switch>a>img,
+    #nav-contact>a>img {
+        width: 12px;
+        height: 12px;
+    }
+
+    #nav-logo>img {
+        width: 16px;
+        height: 16px;
+        padding-left: 1em;
+    }
+
+    #nav-switch>img {
+        width: 14px;
+        height: 14px;
+        padding-right: 1em;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbottom>div>a {
+        font-size: 0.4em;
+        letter-spacing: 0.5px;
+    }
+
+    .navbottom>div>a:hover {
+        letter-spacing: 1px;
+    }
+
+    #nav-contact>a>img {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+/* ---------------------------------------- Pages ---------------------------------------- */
+.page {
+    padding: 4.6em 1em 4.6em 1em;
+}
+
+.section {
+    width: 100%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 1em 1em 1em 1em;
+    transition: border-radius 0.5s;
+    border: solid 8px var(--background);
+}
+
+.sh {
+    background-color: var(--blue2);
+}
+
+.sp {
+    background-color: var(--magenta);
+}
+
+.section:hover {
+    border-radius: 30px;
+    transition: border-radius 0.5s;
+}
+
+.section>h1 {
+    padding-left: 1.9em;
+}
+
+.section>p {
+    filter: brightness(80%);
+    padding: 1em 0em 1em 2.8em;
+}
+
+.cols {
+    width: 100%;
+    display: table;
+}
+
+.column {
+    width: 50%;
+    float: left;
+}
+
+.page img {
+    float: left;
+    width: 30px;
+    margin-right: 15px;
+}
+
+.button {
+    transition: 0.5s;
+    filter: brightness(80%);
+}
+
+.button:hover {
+    transition: 0.5s;
+    transform: scale(1.3);
+    filter: brightness(100%);
+}
+
+.sp>img,
+.sp>video {
+    width: 100%;
+    border-radius: 30px;
+    padding: 1em 1em 1em 1em;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .column {
+        width: 100%;
+    }
+}
